@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/new'
-  get 'posts/create'
-  get 'posts/index'
-  root to: 'home#index'
-  
   devise_for :users
+  resources :posts, only: %i[new create index]
+  root 'posts#index'
 
 
 

@@ -1,2 +1,10 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class="post-container">
+  <% @posts.reverse_each do |post| %>
+  <div class="post">
+    <% if user_signed_in? %>
+      <p class="author"><%= post.user.username %> said:</p>
+    <% end %>
+    <p class="post-content"><%= post.content %></p>
+  </div>
+  <% end %>
+</div>
