@@ -1,8 +1,10 @@
 <div class="new-post-container">
   <%= form_with(model: @post) do |form| %>
     <div class="input-group">
-      <%= form.label :content %>
-      <%= form.text_field :content %>
+      <%= form.label :title %>
+      <%= form.text_field :title %>
+      <%= form.label :body %>
+      <%= form.text_field :body %>
     </div>
     <div class="input-group">
       <%= form.submit %>
